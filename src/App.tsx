@@ -1,10 +1,14 @@
 import "./App.css";
-import { Example } from "./components/Example/Example";
+import React, {useContext} from "react"
+import Grandpa from "./components/Grandpa/Grandpa"; 
+import TextContextProvider, {TextContext} from "./contexts/TextContextProvider";
 
 function App() {
   return (
     <>
-      <Example />{" "}
+      <TextContextProvider>
+        <Grandpa />
+      </TextContextProvider>
     </>
   );
 }
